@@ -18,6 +18,8 @@ static Database *conn = NULL;
 @synthesize database = g_database;
 
 + (Database *) sharedConnection {
+    
+    NSLog(@"cools");
     if (!conn) {
         conn = [[Database alloc] initConnection];
     }
