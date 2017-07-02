@@ -20,6 +20,8 @@ static Database *conn = NULL;
 + (Database *) sharedConnection {
     
     NSLog(@"cools");
+    NSLog(@"cools");
+
     if (!conn) {
         conn = [[Database alloc] initConnection];
     }
