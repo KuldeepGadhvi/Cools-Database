@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ffirst" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v2r-2U-no2">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="last" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aWT-lD-pDs">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z85-dh-J2x">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="svc-fI-0f5"/>
+                                </constraints>
+                                <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="btnSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GOa-2U-QSE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a07-8u-cWQ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Hk4-wB-Wyl"/>
+                                </constraints>
+                                <state key="normal" title="search"/>
+                                <connections>
+                                    <action selector="btnSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="me1-13-4cl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MU-wc-HTC">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BID-Cb-CRb"/>
+                                </constraints>
+                                <state key="normal" title="delete"/>
+                                <connections>
+                                    <action selector="btnDelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iow-MF-iaY"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6hh-fg-URo">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Gn9-ec-ZSn">
+                                        <rect key="frame" x="0.0" y="28" width="283" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gn9-ec-ZSn" id="ZQ0-ah-OE9">
+                                            <frame key="frameInset" width="283" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="hkA-PN-qfl"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="OUD-6I-35o"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="6hh-fg-URo" secondAttribute="trailing" constant="30" id="1Ey-2J-r35"/>
+                            <constraint firstItem="a07-8u-cWQ" firstAttribute="top" secondItem="z85-dh-J2x" secondAttribute="bottom" constant="30" id="2JQ-Cm-L4e"/>
+                            <constraint firstItem="6hh-fg-URo" firstAttribute="top" secondItem="4MU-wc-HTC" secondAttribute="bottom" constant="30" id="6qk-sD-xVy"/>
+                            <constraint firstItem="4MU-wc-HTC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="7zI-PI-2JT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z85-dh-J2x" secondAttribute="trailing" constant="30" id="9L2-jo-K7K"/>
+                            <constraint firstItem="a07-8u-cWQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="E82-K1-giX"/>
+                            <constraint firstItem="v2r-2U-no2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="IDf-Xl-OeU"/>
+                            <constraint firstItem="v2r-2U-no2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="N2t-eH-83n"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a07-8u-cWQ" secondAttribute="trailing" constant="30" id="N5k-t0-D8W"/>
+                            <constraint firstItem="4MU-wc-HTC" firstAttribute="top" secondItem="a07-8u-cWQ" secondAttribute="bottom" constant="30" id="bdU-yX-Kd8"/>
+                            <constraint firstItem="aWT-lD-pDs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="dCE-3o-MX7"/>
+                            <constraint firstItem="z85-dh-J2x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="e3s-Bn-iR1"/>
+                            <constraint firstItem="aWT-lD-pDs" firstAttribute="top" secondItem="v2r-2U-no2" secondAttribute="bottom" constant="30" id="eby-Sx-lg6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aWT-lD-pDs" secondAttribute="trailing" constant="30" id="iPB-Ih-2vo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4MU-wc-HTC" secondAttribute="trailing" constant="30" id="jbQ-8v-XgE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="v2r-2U-no2" secondAttribute="trailing" constant="30" id="mbc-Y5-pPt"/>
+                            <constraint firstItem="6hh-fg-URo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="r8F-4t-Ao8"/>
+                            <constraint firstItem="z85-dh-J2x" firstAttribute="top" secondItem="aWT-lD-pDs" secondAttribute="bottom" constant="30" id="vrv-Hq-5db"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6hh-fg-URo" secondAttribute="bottom" constant="30" id="zsL-LV-VLC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tblView" destination="6hh-fg-URo" id="ZEK-Qk-BB5"/>
+                        <outlet property="txtfname" destination="v2r-2U-no2" id="qBI-Ie-0LI"/>
+                        <outlet property="txtlname" destination="aWT-lD-pDs" id="dwx-ac-CRN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
