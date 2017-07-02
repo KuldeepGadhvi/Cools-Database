@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
-
+#import "Database.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 {
@@ -51,6 +51,9 @@ NSMutableArray *Arr;
 //    NSLog(@"Dict >> %@",[Dict allKeys]);
 //    [Dict setValue:@"" forKey:@"name"];
 //    NSLog(@"Dict >> %@",[Dict allKeys]);
+    
+    NSArray *Arrs = [Database fetchResults:@"SELECT * FROM suppliers"];
+    NSLog(@"Arrs >> %@",Arrs);
 
 }
 

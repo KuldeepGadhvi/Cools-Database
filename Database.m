@@ -62,7 +62,7 @@ static Database *conn = NULL;
     
     const char *sql = [query UTF8String];
     if (sqlite3_prepare_v2(database, sql, -1, &statement , NULL) != SQLITE_OK) {
-        //NSLog(@"Error: failed to prepare fetch results statement with message '%s'.", sqlite3_errmsg(database));
+        NSLog(@"Error: failed to prepare fetch results statement with message '%s'.", sqlite3_errmsg(database));
         NSString *errorMsg = [NSString stringWithFormat:@"Failed to prepare query statement - '%s'.", sqlite3_errmsg(database)];
         [Database errorMessage:errorMsg];
         //NSAssert1(0, @"Error: failed to prepare statement with message '%s'.", sqlite3_errmsg(database));

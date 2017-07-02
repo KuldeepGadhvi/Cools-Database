@@ -7,7 +7,7 @@
 
 // database name demo.sqlite
 
-#define DB_NAME @"demo.sqlite"//@"Conferencedata////NSLog"
+#define DB_NAME @"test.sqlite"//@"Conferencedata////NSLog"
 
 @interface Database : NSObject
 {
